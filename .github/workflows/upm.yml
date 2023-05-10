@@ -25,4 +25,4 @@ jobs :
           git-tag: ${{ steps.tag.outputs.name }}
           pkg-root-dir-path: ARGearSDKUnity/Packages/com.seerslab.mirror_gear.avatar
           samples-dir: ARGearSDKUnity/Assets/Samples
-          main-branch: master
+          main-branch: main
