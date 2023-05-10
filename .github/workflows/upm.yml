@@ -1,0 +1,28 @@
+name : Update-UPM-Branch
+
+# v1.2.3 같은 태그가 푸시되면 시작 
+on : 
+  push : 
+    tags : 
+      - v*
+jobs :
+  update :
+    runs-on : ubuntu-latest
+    steps:
+      # 최신 가져오기
+       - name : Checkout
+         uses: actions/checkout@v2
+         with:
+          fetch-depth: 0
+       # 이벤트를 시작한 태그를 steps.tag.outputs.name에 저장 
+       - name: Tag name
+         id: tag
+         run: echo ::set-output name=name::${GITHUB_REF#refs/tags/v}
+
+       - name: Create UPM Branch
+         uses: kangHeeAh/create-upm-branch-action@main
+         with:
+          git-tag: ${{ steps.tag.outputs.name }}
+          pkg-root-dir-path: ARGearSDKUnity/Packages/com.seerslab.mirror_gear.avatar
+          samples-dir: ARGearSDKUnity/Assets/Samples
+          main-branch: master

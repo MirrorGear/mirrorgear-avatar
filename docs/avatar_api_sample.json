@@ -1,0 +1,54 @@
+{
+    "message": "successfuly!!",
+    "data": {
+        "Avatar": {
+            "BlendShape": {
+                "Shape_EyeUp": 0.2,
+                "Shape_EyeDown": 0.0,
+                "Shape_EyeSmall": 0.5,
+                "Shape_EyeInner": 0.0,
+                "Shape_EyeOuter": 0.2,
+                "Shape_FatJaw": 0.0,
+                "Shape_ThinJaw": 0.4,
+                "Shape_BigLip": -0.5,
+                "Shape_NoseHB": 0.0,
+                "Shape_NoseHS": 0.0,
+                "Shape_NoseLB": 1.0,
+                "Shape_NoseLS": 0.6,
+                "Shape_BrowStraight": 0.0,
+                "Shape_BrowDown": 0.0,
+                "Shape_Thick_Lips": 0.0,
+                "Shape_Thin_Lips": 0.0,
+                "Shape_BrowUp": 0.3,
+                "Type_egg": 0.0,
+                "Type_egg_long": 0.0,
+                "Type_heart": 0.0,
+                "Type_rhombus": 0.0,
+                "Type_square": 0.0,
+                "Type_square_long": 0.7,
+                "Type_round": 0.0
+            },
+            "Accessories": {
+                "hair": {
+                    "style": 0,
+                    "curl": 0,
+                    "bang": 0
+                },
+                "glasses": 0
+            },
+            "Color": {
+                "skin": {
+                    "R": 255,
+                    "G": 237,
+                    "B": 194
+                },
+                "hair": {
+                    "R": 88,
+                    "G": 74,
+                    "B": 62
+                }
+            },
+            "Gender": "male"
+        }
+    }
+}
