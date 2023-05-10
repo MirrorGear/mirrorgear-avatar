@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d5157df6e6940ed845d57866376ffe, type: 3}
+  m_Name: AvatarContainerSO
+  m_EditorClassIdentifier: 
+  Avatars:
+  - Model: {fileID: 5506332463598771586, guid: 5d6720c8b49528e438de0f83f1666e48, type: 3}
+    PositionOffset: {x: 0, y: 0, z: 0}
+    RotationOffset: {x: 0, y: 180, z: 0}
+    Hairs:
+    - {fileID: 4231772195468932677, guid: 9b561e921693ac547ab9189bfb1e0bc4, type: 3}
+    - {fileID: 3773681771661513271, guid: f90e8f21afda246469b0fa0652e041be, type: 3}
+    - {fileID: 6013418231252440297, guid: 3cacec86de0b11a41835b2b64c5a84e8, type: 3}
+    Glasses:
+    - {fileID: 0}
+    - {fileID: 3416429976886220112, guid: 46c606dc24c8246e8adc84e80ead1c18, type: 3}
+    Cloths:
+    - {fileID: 0}
+  - Model: {fileID: 212574559664875912, guid: 438841ace8d645d4693aca0323d498c9, type: 3}
+    PositionOffset: {x: 0, y: 0, z: 0}
+    RotationOffset: {x: 0, y: 180, z: 0}
+    Hairs:
+    - {fileID: 3885968623266218833, guid: fc99b8824e3746c43abff9d533af9112, type: 3}
+    - {fileID: 4732520873624286581, guid: d87898c5966837641abfd751f5ce5388, type: 3}
+    - {fileID: 8509502667692956397, guid: 54fe29785e2115940930130a203cf9d0, type: 3}
+    Glasses:
+    - {fileID: 0}
+    - {fileID: 7427680580771277164, guid: 5762d0af5a135f044ad6e7811e331fed, type: 3}
+    Cloths:
+    - {fileID: 0}
