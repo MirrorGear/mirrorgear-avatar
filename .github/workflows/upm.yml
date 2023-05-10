@@ -5,6 +5,11 @@ on :
   push : 
     tags : 
       - v*
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to trigger the workflow'
+        required: false
 jobs :
   update :
     runs-on : ubuntu-latest
@@ -14,10 +19,30 @@ jobs :
          uses: actions/checkout@v2
          with:
           fetch-depth: 0
+       
+       # workflow_dispatch 이벤트를 통해 tag 입력받기   
+       - name: Tag name
+         if: github.event_name == 'workflow_dispatch'
+         id: input_tag
+         run: |
+          tag=${{ github.event.inputs.tag }}
+          tag=${tag#v}
+          echo "::set-output name=name::$tag"
+       
        # 이벤트를 시작한 태그를 steps.tag.outputs.name에 저장 
        - name: Tag name
-         id: tag
+         if: github.event_name == 'push'
+         id: push_tag
          run: echo ::set-output name=name::${GITHUB_REF#refs/tags/v}
+         
+       - name: Input tag name
+         id: tag
+         run: |
+          if [ -z "${{ steps.input_tag.outputs.name }}" ]; then
+            echo "::set-output name=name::${{ steps.push_tag.outputs.name }}"
+          else
+            echo "::set-output name=name::${{ steps.input_tag.outputs.name }}"
+          fi
 
        - name: Create UPM Branch
          uses: kangHeeAh/create-upm-branch-action@main
