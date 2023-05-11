@@ -15,6 +15,21 @@ MirrorGearSDK Avatar는 Unity 엔진을 사용하여 아바타 생성을 위한 
 위와 같은 과정으로 아바타를 만들 수 있습니다.
 
 ## 시작하기 전에
+### Dependencies
+`mirrorgear-avatar`를 UPM 패키지로 설치할 경우 패키지를 설치된 상태에서 사용가능합니다.
+- `com.vrmc.vrmshaders`
+- `com.vrmc.gltf`
+- `com.vrmc.univrm`
+
+`Window` -> `Package Manager` -> `+` -> `Add Package from git URL...` 또는 `Packages/manifest.json` 수정을 통해 추가하실 수 있습니다.
+
+|UPM package|git URL|
+|------|---|
+|com.vrmc.vrmshaders|https://github.com/vrm-c/UniVRM.git?path=/Assets/VRMShaders#v0.107.2|
+|com.vrmc.gltf|https://github.com/vrm-c/UniVRM.git?path=/Assets/UniGLTF#v0.107.2|
+|com.vrmc.univrm|https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM#v0.107.2|
+
+### cmsURL
 아바타 요청에 사용하는 cmsURL은 별도로 얻어야 합니다. 올바른 URL을 얻으려면 '시어스랩'에 문의하시기 바랍니다.
 
 ## 사용 방법
